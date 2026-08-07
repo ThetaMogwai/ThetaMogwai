@@ -1,0 +1,160 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="565" viewBox="0 0 820 565" font-family="'SFMono-Regular', 'SF Mono', 'Cascadia Code', 'JetBrains Mono', Menlo, Consolas, monospace">
+    <defs>
+        <clipPath id="win1">
+            <rect x="0" y="0" width="520" height="470" rx="12"/>
+        </clipPath>
+
+        <clipPath id="win2">
+            <rect x="0" y="0" width="800" height="500" rx="12"/>
+        </clipPath>
+    </defs>
+
+    <!-- option chain window -->
+    <g id="background window" transform="translate(10,10)">
+        <rect width="800" height="500" rx="12" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+
+        <!-- title bar -->
+        <g id="title bar" clip-path="url(#win2)">
+            <rect width="800" height="40" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+            <circle cx="24" cy="20" r="6" fill="#ff5f56"/>
+            <circle cx="44" cy="20" r="6" fill="#febc2e"/>
+            <circle cx="64" cy="20" r="6" fill="#27c93f"/>
+            <text x="400.0" y="24" text-anchor="middle" font-size="12.5" fill="#8b949e">AAPL option chain</text>
+        </g>
+
+        <!-- external borders -->
+        <rect x="0" y="0" width="800" height="500" rx="12" fill="none" stroke="#30363d" stroke-width="1"/>
+    </g>
+
+    <!-- terminal window -->
+    <g id="terminal window" transform="translate(40,80)" clip-path="url(#win1)">
+    
+        <g id="window shape" transform="scale(0)">
+            <rect width="520" height="470" rx="12" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+
+            <!-- title bar -->
+            <g id="title bar">
+                <rect width="520" height="40" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+                <circle cx="24" cy="20" r="6" fill="#ff5f56"/>
+                <circle cx="44" cy="20" r="6" fill="#febc2e"/>
+                <circle cx="64" cy="20" r="6" fill="#27c93f"/>
+                <text x="260.0" y="24" text-anchor="middle" font-size="12.5" fill="#8b949e">https://github.com/ThetaMogwai</text>
+            </g>
+
+            <!-- external borders -->
+            <rect width="520" height="470" rx="12" fill="none" stroke="#30363d" stroke-width="1"/>
+
+            <!-- animate window -->
+            <animateTransform id="anim_identity" attributeName="transform" type="scale" from="0" to="1" dur="0.3s" begin="1.5s" calcMode="linear" fill="freeze"/>
+        </g>
+
+        <g id="typedContent" clip-path="url(#win1)" font-size="14.5">
+
+            <!-- == == identity section == == -->
+
+            <g transform="translate(30, 85)">
+                <g opacity="0">
+                    <animate attributeName="opacity" from="0" to="1" dur="0.15s" begin="anim_identity.end+0.4s" fill="freeze"/>
+                    <clipPath id="cmdClip1">
+                        <rect x="0" y="-50" width="15" height="100">
+                            <animate attributeName="width" from="15" to="330" dur="1.5s" begin="anim_identity.end+0.5s" fill="freeze" calcMode="linear"/>
+                        </rect>
+                    </clipPath>
+
+                    <!-- command line -->
+                    <g clip-path="url(#cmdClip1)">
+                        <text xml:space="preserve"><tspan fill="#3fb950">$ </tspan><tspan fill="#febc2e">git </tspan><tspan fill="#c9d1d9">secret reveal </tspan><tspan fill="#febc2e">--profile </tspan><tspan fill="#a5d6ff">ThetaMogwai </tspan></text>
+                    </g>
+
+                    <!-- typing caret -->
+                    <rect x="20" y="-13" width="8" height="17" fill="#3fb950">
+                        <animate attributeName="x" from="20" to="330" dur="1.5s" begin="anim_identity.end+0.5s" fill="freeze" calcMode="linear"/>
+                        <animate attributeName="opacity" from="1" to="0" begin="anim_identity.end+2.4s" dur="0.2" fill="freeze"/>
+                    </rect>
+                </g>
+
+                <!-- loading anim -->
+                <g opacity="0">
+                    <animate attributeName="opacity" from="0" to="1" dur="0.15s" begin="anim_identity.end+2.4s" fill="freeze"/>
+                    <text x="0" y="25" xml:space="preserve" fill="#c9d1d9">  [               ] --loading</text>
+                    <rect x="24" y="17" width="119" height="9" rx="3" fill="#333a42"/>
+                    <rect x="24" y="17" width="0" height="9" rx="3" fill="#3fb950">
+                    <animate attributeName="width" from="0" to="119" dur="0.8s" begin="anim_identity.end+2.7s" fill="freeze" calcMode="linear"/>
+                    </rect>
+                </g>
+
+                <g opacity="0">
+                    <animate attributeName="opacity" from="0" to="1" begin="anim_identity.end+3.8s" dur="0.15s" fill="freeze"/>
+                    <text x="0" y="60" xml:space="preserve"><tspan fill="#febc2e">  id: </tspan><tspan fill="#a5d6ff">Léopold Filliatre</tspan><tspan fill="#c9d1d9">, french student in math and economy</tspan></text>
+                </g>
+
+                <g opacity="0">
+                    <animate attributeName="opacity" from="0" to="1" begin="anim_identity.end+4.1s" dur="0.15s" fill="freeze"/>
+                    <text x="0" y="80" xml:space="preserve"><tspan fill="#c9d1d9">      interests in finance and CS</tspan></text>
+                </g>    
+            </g>
+
+            <!-- == == education section == == -->
+
+            <g transform="translate(30, 240)">
+                <g opacity="0">
+                    <animate id="anim_education" attributeName="opacity" from="0" to="1" dur="0.15s" begin="6.5s" fill="freeze"/>
+                    <clipPath id="cmdClip2">
+                        <rect x="0" y="-50" width="15" height="100">
+                            <animate attributeName="width" from="15" to="265" dur="1.3s" begin="anim_education.end+0.3s" fill="freeze" calcMode="linear"/>
+                        </rect>
+                    </clipPath>
+
+                    <!-- command (typewriter reveal via clip) -->
+                    <g clip-path="url(#cmdClip2)">
+                        <text xml:space="preserve"><tspan fill="#3fb950">$ </tspan><tspan fill="#febc2e">git </tspan><tspan fill="#c9d1d9">log </tspan><tspan fill="#febc2e">--education </tspan><tspan fill="#a5d6ff">ThetaMogwai </tspan></text>
+                    </g>
+
+                    <!-- typing caret -->
+                    <rect x="20" y="-13" width="8" height="17" fill="#3fb950">
+                        <animate attributeName="x" from="20" to="265" dur="1.3s" begin="anim_education.end+0.3s" fill="freeze" calcMode="linear"/>
+                        <animate attributeName="opacity" from="1" to="0" begin="anim_education.end+2s" dur="0.2s" fill="freeze"/>
+                    </rect>
+                </g>
+
+                <g opacity="0">
+                    <animate attributeName="opacity" from="0" to="1" begin="anim_education.end+2.4s" dur="0.15s" fill="freeze"/>
+                    <text x="0" y="25" xml:space="preserve" fill="#c9d1d9">  [               ] --loading</text>
+                    <rect x="24" y="17" width="119" height="9" rx="3" fill="#333a42"/>
+                    <rect x="24" y="17" width="0" height="9" rx="3" fill="#3fb950">
+                    <animate attributeName="width" from="0" to="119" dur="0.8s" begin="anim_education.end+2.7s" fill="freeze" calcMode="linear"/>
+                    </rect>
+                </g>
+            
+
+                <g transform="translate(16, 60)">
+                    <text x="00" y="00" xml:space="preserve" opacity="0"><tspan fill="#febc2e">commit</tspan><tspan fill="#c9d1d9"> f1a7d7</tspan>
+                        <animate id="edu1" attributeName="opacity" from="0" to="1" begin="anim_education.end+3.8s" dur="0.15s" fill="freeze"/>
+                    </text>
+                    <text x="13" y="20" xml:space="preserve" opacity="0"><tspan fill="#c9d1d9">University of Angers, France</tspan>
+                        <animate attributeName="opacity" from="0" to="1" begin="edu1.end+0.3s" dur="0.15s" fill="freeze"/>
+                    </text>
+                    <text x="13" y="40" xml:space="preserve" opacity="0"><tspan fill="#c9d1d9">Dual Bachelor in </tspan><tspan fill="#febc2e">Mathematics</tspan><tspan fill="#c9d1d9"> and </tspan><tspan fill="#febc2e">Economy</tspan><tspan fill="#c9d1d9">, class of 2027</tspan>
+                        <animate attributeName="opacity" from="0" to="1" begin="edu1.end+0.6s" dur="0.15s" fill="freeze"/>
+                    </text>
+                    <text x="13" y="60" xml:space="preserve" opacity="0"><tspan fill="#3fb950">4.0 GPA</tspan><tspan fill="#c9d1d9"> ~ (18.5/20), top of my class</tspan>
+                        <animate attributeName="opacity" from="0" to="1" begin="edu1.end+0.9s" dur="0.15s" fill="freeze"/>
+                    </text>
+                </g>
+
+                <g transform="translate(16, 160)">
+                    <text x="00" y="00" xml:space="preserve" opacity="0"><tspan fill="#febc2e">commit</tspan><tspan fill="#c9d1d9"> 3ec23c</tspan><tspan fill="#3fb950"></tspan>
+                        <animate id="edu2" attributeName="opacity" from="0" to="1" begin="edu1.end+1.4s" dur="0.15s" fill="freeze"/>
+                    </text>
+                    <text x="13" y="20" xml:space="preserve" opacity="0"><tspan fill="#c9d1d9">Nancy Medical School, France </tspan>
+                        <animate attributeName="opacity" from="0" to="1" begin="edu2.end+0.3s" dur="0.15s" fill="freeze"/>
+                    </text>
+                    <text x="13" y="40" xml:space="preserve" opacity="0"><tspan fill="#febc2e">Medical student</tspan><tspan fill="#c9d1d9">, class of 2024 </tspan>
+                        <animate attributeName="opacity" from="0" to="1" begin="edu2.end+0.6s" dur="0.15s" fill="freeze"/>
+                    </text>
+                </g> 
+            </g>      
+        </g>  
+    </g>
+</svg>
